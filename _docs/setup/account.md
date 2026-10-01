@@ -99,6 +99,12 @@ With this setting enabled, any rates where planned charges are scheduled but exc
 
     This is an artificial restriction imposed by the integration and is separate from the restriction setting within the OE app. You can have this enabled in the integration but disabled within the app and vice versa.
 
+!!! info
+
+    This setting applies to the rate information used by the [rate sensors](../entities/electricity.md#current-rate) and the [off peak sensor](../entities/electricity.md#off-peak), and to anything calculated from those rates, such as the [current accumulative cost](../entities/electricity.md#current-accumulative-cost) sensors and [cost trackers](./cost_tracker.md). The [is dispatching sensor](../entities/intelligent.md#is-dispatching) is not affected by this setting.
+
+    The previous consumption sensors (e.g. [previous accumulative cost](../entities/electricity.md#previous-accumulative-cost)) always enforce the cap, regardless of this setting, as this is what you will be charged.
+
 ## Home Pro Settings
 
 If you are lucky enough to own an [Octopus Home Pro](https://forum.octopus.energy/t/for-the-pro-user/8453/2352/) (note that is is no longer possible to obtain one), you can now receive this data locally from within Home Assistant.
